@@ -14,7 +14,6 @@ module.exports = class Email {
 
   newTransport() {
     if (process.env.NODE_ENV === 'production') {
-      console.log('In production');
       const transport = nodemailer.createTransport(
         nodemailerSendgrid({
           apiKey: process.env.SENDGRID_APIKEY,

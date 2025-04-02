@@ -45,7 +45,6 @@ exports.getTour = catchAsync(async (req, res, next) => {
 });
 
 exports.getLoginForm = (req, res) => {
-  console.log('Hi');
   res.setHeader(
     'Content-Security-Policy',
     "script-src 'self' https://api.mapbox.com https://cdn.jsdelivr.net https://js.stripe.com; worker-src 'self' blob:;",
