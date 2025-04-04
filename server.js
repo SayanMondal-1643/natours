@@ -15,7 +15,7 @@ dotenv.config({ path: './config.env' });
 //   process.env.DATABASE_PASSWORD,
 // );
 
-mongoose.connect('mongodb://127.0.0.1:27017/natours').then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
   console.log('Database connected successfully');
 });
 const port = process.env.PORT;
